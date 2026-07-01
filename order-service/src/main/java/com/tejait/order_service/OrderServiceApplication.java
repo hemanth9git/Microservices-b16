@@ -12,9 +12,9 @@ public class OrderServiceApplication {
 		SpringApplication.run(OrderServiceApplication.class, args);
 	}
 	@Bean
-	public WebClient webClient(WebClient.Builder webClientBuilder) {
-		return webClientBuilder.baseUrl("http://localhost:8085") // Optional: Set your base URL here
-		.build();
+	public WebClient webClient(){
+		return WebClient.builder().build();
 	}
+
 
 }
